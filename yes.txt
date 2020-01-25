@@ -1,0 +1,114 @@
+import java.util.Scanner;
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String[] JavaStringArray = new String[4];
+		JavaStringArray[0] = "g";
+		JavaStringArray[1] = "a";
+		JavaStringArray[2] = "r";
+		JavaStringArray[3] = "y";
+		
+		String[] gary = new String[4];
+		gary[0] = "-";
+		gary[1] = "-";
+		gary[2] = "-";
+		gary[3] = "-";
+		
+		int y=0;
+		int x=0;
+		while(x<19) {
+		
+		 Scanner myScanner = new Scanner(System.in);
+		    System.out.println("Enter Letter");
+		    String letter = myScanner.nextLine();
+    
+		 if(letter.equals(JavaStringArray[0])) {
+			gary[0] = JavaStringArray[0];
+		    for(int i=0;i<gary.length;i++) { 
+		    		System.out.print(gary[i]);
+		    }
+		 }
+		 else if(letter.equals(JavaStringArray[1])) {
+			 gary[1] = JavaStringArray[1];
+			 for(int i=0;i<gary.length;i++) { 
+			    	System.out.print(gary[i]);
+			}		
+		 }
+		 else if(letter.equals(JavaStringArray[2])) {
+			 gary[2] = JavaStringArray[2];
+			 for(int i=0;i<gary.length;i++) { 
+			    	System.out.print(gary[i]);
+			 }
+		 }
+		 else if(letter.equals(JavaStringArray[3])) {
+			gary[3] = JavaStringArray[3];
+			for(int i=0;i<gary.length;i++) { 
+			    	System.out.print(gary[i]);
+			 }
+		 }
+		 else{
+			 System.out.println("incorrect letter");
+				for(int i=0;i<gary.length;i++) { 
+			    	System.out.print(gary[i]);
+			 }
+				System.out.println();
+			 if(y==0) {
+				 System.out.println(" | ");
+			 }
+			 if(y==1) {
+				 System.out.println(" | ");
+				 System.out.println(" O");
+			 }
+			 if(y==2) {
+				 System.out.println(" | ");
+				 System.out.println(" O");
+				 System.out.println("/");
+			 }
+			 if(y==3) {
+				 System.out.println(" | ");
+				 System.out.println(" O");
+				 System.out.println("/|");
+			 }
+			 if(y==4) {
+				 System.out.println(" | ");
+				 System.out.println(" O");
+				 System.out.println("/|\\"); 
+			 }
+			 if(y==5) {
+				 System.out.println(" | ");
+				 System.out.println(" O");
+				 System.out.println("/|\\"); 
+				 System.out.println("/");
+			 }
+			 if(y==6) {
+				 System.out.println(" | ");
+				 System.out.println(" O");
+				 System.out.println("/|\\"); 
+				 System.out.println("/ \\");
+				 System.out.println("YOU LOSE");
+				 break;
+			 }
+			 y++;
+		}
+			 
+			
+			 
+		 
+		 	x++;
+		 	System.out.println();
+		 	if(gary[0].equals(JavaStringArray[0]) && gary[1].equals(JavaStringArray[1]) && gary[2].equals(JavaStringArray[2])&& gary[3].equals(JavaStringArray[3])){
+		 		System.out.println("YOU WIN");
+		 		break;
+		 	
+		 	}	
+
+		 		
+	}
+		 	
+	}
+}
+
+	
+
+
