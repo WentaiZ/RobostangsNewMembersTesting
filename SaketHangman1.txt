@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class Hangman_project {
+	
+	public static void main(String [] args) {
+			
+	String[] words = new String [2];
+	
+	words[0] = "h";
+	words[1] = "i";
+	
+	
+	int i = 0;
+	int word = 0;
+	
+	while(i < 10){
+	    
+		if (word == 2) {
+			System.out.println("You win!" + words[0] + words[1]);
+			break;
+		} else {
+					
+		Scanner s = new Scanner(System.in);
+        System.out.println("Enter a letter(You have 10 strikes):");
+        String letter = s.next();
+
+		
+            if(letter.equals(words[0])) {
+            	word = word + 1;
+            	System.out.println("H_");
+ 
+            } else if(letter.equals(words[1])){
+            	word = word + 1;
+            	System.out.println("_I");
+ 
+            } else {
+            	i = i + 1;
+            	System.out.println("Strike " + i);
+            }
+		}
+
+	}
+	if(i>=10) {
+		System.out.println("You lose!");
+		System.out.println("The word was " + words[0] + words[1]);
+	}
+	}
+		
+	}
+
+
+
