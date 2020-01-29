@@ -1,0 +1,136 @@
+import java.util.Random;
+import java.util.Scanner;
+public class Hangman_project {
+	
+	public static void main(String [] args) {
+	String[] [] words1 = {{"G", "R", "E", "A", "T"}, {"S", "M", "I", "L", "E"}, {"L", "A", "U", "G", "H"}};
+	
+	int x= new Random().nextInt(3);
+	int i = 0;
+	int word = 0;
+	
+	
+	while(i < 10){
+		
+		if(x == 0) {  
+		if (word == 5) {
+			System.out.println("You win!" + words1[0] [0] + words1[0][1] + words1[0][2] + words1[0][3] + words1[0][4]);
+			break;
+		} else {
+					
+		Scanner s = new Scanner(System.in);
+        System.out.println("Enter a letter(You have 10 strikes):");
+        String letter = s.next();
+
+            if(letter.equals(words1[0][0])) {
+            	word = word + 1;
+            	System.out.println("G____");
+ 
+            } else if(letter.equals(words1[0][1])){
+            	word = word + 1;
+            	System.out.println("_R___");
+            	
+            } else if(letter.equals(words1[0][2])){
+            	word = word + 1;
+            	System.out.println("__E__");
+            	
+            } else if(letter.equals(words1[0][3])){
+            	word = word + 1;
+            	System.out.println("___A_");
+            	
+            } else if(letter.equals(words1[0][4])){
+            	word = word + 1;
+            	System.out.println("____T");
+            	
+             } else {
+            	i = i + 1;
+            	System.out.println("Strike " + i);
+            }
+		}
+		
+		if(x == 1) {
+			if (word == 5) {
+				System.out.println("You win!" + words1[1] [0] + words1[1][1] + words1[1][2] + words1[1][3] + words1[1][4]);
+				break;
+			} else {
+						
+			Scanner s = new Scanner(System.in);
+	        System.out.println("Enter a letter(You have 10 strikes):");
+	        String letter = s.next();
+	        
+            if(letter.equals(words1[1][0])) {
+            	word = word + 1;
+            	System.out.println("S____");
+ 
+            } else if(letter.equals(words1[1][1])){
+            	word = word + 1;
+            	System.out.println("_M___");
+            	
+            } else if(letter.equals(words1[1][2])){
+            	word = word + 1;
+            	System.out.println("__I__");
+            	
+            } else if(letter.equals(words1[1][3])){
+            	word = word + 1;
+            	System.out.println("___L_");
+            	
+            } else if(letter.equals(words1[1][4])){
+            	word = word + 1;
+            	System.out.println("____E");
+            	
+             } else {
+            	i = i + 1;
+            	System.out.println("Strike " + i);
+            }
+		}
+		
+if(x == 2) {
+				if (word == 5) {
+					System.out.println("You win!" + words1[2] [0] + words1[2][1] + words1[2][2] + words1[2][3] + words1[2][4]);
+					break;
+				} else {
+							
+				Scanner s = new Scanner(System.in);
+		        System.out.println("Enter a letter(You have 10 strikes):");
+		        String letter = s.next();
+            if(letter.equals(words1[2][0])) {
+            	word = word + 1;
+            	System.out.println("L____");
+ 
+            } else if(letter.equals(words1[2][1])){
+            	word = word + 1;
+            	System.out.println("_A___");
+            	
+            } else if(letter.equals(words1[2][2])){
+            	word = word + 1;
+            	System.out.println("__U__");
+            	
+            } else if(letter.equals(words1[2][3])){
+            	word = word + 1;
+            	System.out.println("___G_");
+            	
+            } else if(letter.equals(words1[2][4])){
+            	word = word + 1;
+            	System.out.println("____H");
+            	
+             } else {
+            	i = i + 1;
+            	System.out.println("Strike " + i);
+            }
+		}
+		
+		
+		}
+
+	}
+	if(i>=10) {
+		System.out.println("You lose!");
+		System.out.println("The word was " + words1[0] + words1[1] + words1[2] + words1[3] + words1[4]);
+	}
+	}
+	}
+	}
+}
+
+
+
