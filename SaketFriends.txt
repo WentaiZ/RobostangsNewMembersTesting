@@ -1,0 +1,131 @@
+import java.util.Scanner;
+public class Friends {
+
+	public static void main(String[] args) {
+		
+		String[] yes = new String[2];
+		yes[0] = "Yes";
+		
+		String[] [] people = { {"John", "15", "Gabriel"}, {"Snow", "15", "Vanessa"}, {"April", "15", "Chris"}};
+		
+		int i = 0;
+		
+		while(i == 0) {
+			
+		Scanner f = new Scanner(System.in);
+		System.out.println("Do you want to know age?(Yes or No)");
+		String start = f.next();	
+			
+			
+		if (start.equals(yes[0])) {
+			Scanner g = new Scanner(System.in);
+			System.out.println("Enter a name:");
+			String name = g.next();
+        
+        if (name.equals(people[0][0])) {
+        	System.out.println(people[0][1]);
+        	break;
+        } else if (name.equals(people[1][0])) {
+        	System.out.println(people[1][1]);
+        	break;
+        } else if (name.equals(people[2][0])) {
+        	System.out.println(people[2][1]);
+        	break;
+        }
+		} else {
+			break;
+		}
+	}
+		while(i == 0) {
+		Scanner b = new Scanner(System.in);
+		System.out.println("Do you want to see friends?(Yes or No)");
+		String ans = b.next();
+		// Fix this I
+		//          v
+		if(ans.equals(yes[0])) {
+			
+			Scanner c = new Scanner(System.in);
+			System.out.println("For whom?");
+			String friends = c.next();
+			
+	        if (friends.equals(people[0][0])) {
+	        	System.out.println(people[0][2]);
+	        	
+	        } else if (friends.equals(people[1][0])) {
+	        	System.out.println(people[1][2]);
+	        	
+	        } else if (friends.equals(people[2][0])) {
+	        	System.out.println(people[2][2]);
+	        }
+			
+		} else {
+			
+			Scanner d = new Scanner(System.in);
+			System.out.println("Do you want to add names?(Yes or No)");
+			String adding = d.next();
+			
+			if(adding.equals(yes[0])) {
+				
+				Scanner g = new Scanner(System.in);
+				System.out.println("For whom?");
+				String Add = g.next();
+	
+		        if (Add.equals(people[0][0])) {
+					Scanner k = new Scanner(System.in);
+					System.out.println("Which name?");
+					String name = k.next(); 
+					people[0][2] = people[0][2] + " " + name;
+		        	
+		        } else if (Add.equals(people[1][0])) {
+					Scanner l = new Scanner(System.in);
+					System.out.println("Which name?");
+					String name = l.next();
+					people[0][2] = people[1][2] + "0" + name;
+		        	
+		        } else if (Add.equals(people[2][0])) {
+					Scanner m = new Scanner(System.in);
+					System.out.println("Which name?");
+					String name = m.next();
+					people[2] [2] = people[0][2] + "0" + name;
+		        }
+				
+			} else {
+				
+				Scanner e = new Scanner(System.in);
+				System.out.println("Do you want to subtract names(Yes or No)");
+				String subtracting = e.next();
+				
+				if(subtracting.equals(yes[0])) {
+					
+					Scanner h = new Scanner(System.in);
+					System.out.println("For whom?");
+					String Minus = h.next();
+
+			        if (Minus.equals(people[0][0])) {
+						people[0][2] = " ";
+						break;
+			        	
+			        } else if (Minus.equals(people[1][0])) {
+						people[1][2] = " ";
+			        	break;
+						
+			        } else if (Minus.equals(people[2][0])) {
+						people[2][2] = " ";
+						break;
+			        }
+					
+				} else {
+					break;
+				}
+				
+			}
+			
+	}	
+		
+	}
+		
+	}
+		
+}
+	
+
